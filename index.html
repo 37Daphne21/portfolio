@@ -35,18 +35,63 @@
   <!-- Home -->
 <section id="home">
   <img src="images/profile.jpg" alt="Daphne's profile photo" class="home__avatar">
-  <h1 class="home__title 0000 88888">Hello,<br>I'm Daphne</h1>
+  <h1 class="home__title">Hello,<br>I'm Daphne</h1>
   <h2 class="home_description">자유롭고 독창적인 문구 넣기</h2>
   <button class="home__contact">Contact me</button>
 </section>
+
   <!-- About -->
-  <section id="about"></section>
+  <section id="about">
+    <h1>About me</h1> <!-- 섹션마다 공통적으로 쓰이는 h1 스타일이기 때문에 about__h1이 아니라 그냥 h1으로-->
+    <p>말하고 싶은 것 적기 / 나를 잘 어필할 수 있는 문장 2~3문장 / 나는 어떤 일에 관심이 있고, 어떤 일이 좋다 등등 / 나에 대한 요약 설명</p>
+
+    <div class="about__majors"> <!-- 메인 스펙, 메이저 -->
+      <!-- major 안에는 가장 자신있는 3가지 적기. html css javascript 나눠도되고, 이 세개를 묶고 나머지 두개를 더 생각해도 됨 / 관련 아이콘은 Font Awesome 이용 / 원하는 아이콘 클릭 후 i class 복사한 후 원하는 위치에 마크업 해주면 됨-->
+      <div class="major">
+        <div class="major__icon"><i class="fab fa-html5"></i></div>
+        <div class="major__title">HTML5</div>
+        <div class="major__description">HTML, HTML5에 대한<br> 블라블라블라블라블라</div>
+      </div>
+
+      <div class="major">
+        <div class="major__icon"><i class="fab fa-css3-alt"></i></div>
+        <div class="major__title">CSS3</div>
+        <div class="major__description">CSS, CSS3에 대한<br> 블라블라블라블라블라</div>
+      </div>
+
+      <div class="major">
+        <div class="major__icon"><i class="fab fa-js-square"></i></div>
+        <div class="major__title">JavaScript</div>
+        <div class="major__description">JavaScript, jQuery에 대한<br> 블라블라블라블라블라</div>
+      </div>
+    </div>
+
+    <div class="about__study">
+      <div class="study">
+        <i class="fas fa-book"></i>
+        <p class="study__name">디지털콘텐츠기획양성과정</p>
+        <p class="study__period">2020.00.00 ~ 2020.00.00</p>
+      </div>
+      
+      <div class="study">
+        <div class="about__study">
+          <i class="fas fa-school"></i>
+          <p class="study__name">스마트 UI/UX 웹퍼블리싱</p>
+          <p class="study__period">2020.00.00 ~ 2020.00.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Skills -->
   <section id="skills"></section>
+
   <!-- Work -->
   <section id="work"></section>
+
   <!-- Testimonials -->
   <section id="testimonials"></section>
+
   <!-- contact -->
   <section id="contact"></section>
 </body>
