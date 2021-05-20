@@ -250,7 +250,7 @@ p {
 
 /* Skills */
 #skills {
-  background-color: var(--color-yellow);
+  background-color: var(--color-light-blue);
 }
 
 .skillset {
@@ -386,7 +386,7 @@ p {
   justify-content: center;
 }
 
-/* 각 썸네일 hover 시 text 보이도록 */
+  /* 각 썸네일 hover 시 text 보이도록 */
 .project:hover .project__description {
   opacity: 0.8;
   transform: translateY(0);
@@ -408,7 +408,7 @@ p {
   background-color: var(--color-dark-white);
 }
 
-/* Testimonial */
+/* Testimonials */
 #testimonials {
   background-color: var(--color-light-white);
 }
@@ -451,4 +451,33 @@ p {
   color: var(--color-peach);
   font-size: var(--font-micro);
   font-weight: var(--weight-semi-bold);
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-blue);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact__links i {
+  transition: all 0.2s ease-in;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-pink);
 }
