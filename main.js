@@ -25,7 +25,6 @@ navbarMenu.addEventListener('click', (event) => {
     return;
   }
   console.log(link);
-
   scrollToSection(link);
 });
 
@@ -60,6 +59,35 @@ arrowUp.addEventListener('click', () => {
 });
 
 
+// Projects : 카테고리 버튼 클릭 시 필터링
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter; // || : span 안에 든 숫자 클릭시에도 적용될 수 있도록 지정
+  if (filter == null) {
+    return;
+  }
+  // console.log(filter);
+  projectContainer.classList.add('ani-out'); // opacity 0처리 애니효과
+
+  setTimeout(() => {  // 3초 뒤 나올 컨텐츠 셋팅
+
+  projects.forEach((project) => {
+    // console.log(project.dataset.type);
+    if (filter === '*' || filter === project.dataset.type) { // filter값과 type이 동일한 data만 추출
+      project.classList.remove('invisible');
+    } else {
+      project.classList.add('invisible');
+    }
+  });
+
+    projectContainer.classList.remove('ani-out'); // opacity 1 처리
+  },300);
+});
+
+
+/////////////////////// 사용자지정함수 ///////////////////////
 // 클릭 시 해당 섹션으로 스크롤 이동되는 함수 지정
 function scrollToSection(selector) {
   const scrollTo = document.querySelector(selector);

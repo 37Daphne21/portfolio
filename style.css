@@ -372,6 +372,14 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+/* 각 .category__btn 클릭 시, 해당되지 않는 project들이 서서히 사라지게 보이는 ani 효과 */
+.work__projects.ani-out {
+  opacity: 0;
+  transform: scale(0.97) translateY(20px);
 }
 
 .project {
@@ -385,6 +393,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {

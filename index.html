@@ -171,14 +171,14 @@
       <h1>My Work</h1>
       <h2>Projects</h2>
       <div class="work__categories">
-        <button class="category__btn active">All<span class="category__count">5</span></button>
-        <button class="category__btn">Site<span class="category__count">2</span></button>
-        <button class="category__btn">Process<span class="category__count">3</span></button>
-        <button class="category__btn">Etc<span class="category__count">0</span></button>
+        <button class="category__btn active" data-filter="*">All<span class="category__count">5</span></button>
+        <button class="category__btn" data-filter="site">Site<span class="category__count">2</span></button>
+        <button class="category__btn" data-filter="process">Process<span class="category__count">3</span></button>
+        <button class="category__btn" data-filter="qualification">Qualification<span class="category__count">0</span></button>
       </div>
 
       <div class="work__projects">  <!-- 각각의 프로젝트를 클릭하면 깃허브로 연결되고(a태그 필수), 마우스를 올리면 프로젝트에 대한 이름과 간략한 설명이 나올 수 있게(어떤 기술을 사용해서 만들었는지 등) -->
-        <a href="#" class="project" target="_blank">
+        <a href="#" class="project" target="_blank" data-type="site">
           <img src="images/projects/project1.png" alt="project1" class="project__img">
           <div class="project__description">
             <h3>Project 1</h3>
@@ -186,7 +186,7 @@
           </div>
         </a>
 
-        <a href="#" class="project" target="_blank">
+        <a href="#" class="project" target="_blank" data-type="site">
           <img src="images/projects/project2.png" alt="project2" class="project__img">
           <div class="project__description">
             <h3>Project 1</h3>
@@ -194,7 +194,7 @@
           </div>
         </a>
 
-        <a href="#" class="project" target="_blank">
+        <a href="#" class="project" target="_blank" data-type="process">
           <img src="images/projects/project3.png" alt="project3" class="project__img">
           <div class="project__description">
             <h3>Project 1</h3>
@@ -202,7 +202,7 @@
           </div>
         </a>
 
-        <a href="#" class="project" target="_blank">
+        <a href="#" class="project" target="_blank" data-type="process">
           <img src="images/projects/project4.png" alt="project4" class="project__img">
           <div class="project__description">
             <h3>Project 1</h3>
@@ -210,8 +210,32 @@
           </div>
         </a>
 
-        <a href="#" class="project" target="_blank">
+        <a href="#" class="project" target="_blank" data-type="process">
           <img src="images/projects/project5.png" alt="project5" class="project__img">
+          <div class="project__description">
+            <h3>Project 1</h3>
+            <span>Web Site - Meli Quence</span>
+          </div>
+        </a>
+
+        <a href="#" class="project" target="_blank" data-type="qualification">
+          <img src="images/projects/project6.png" alt="project6" class="project__img">
+          <div class="project__description">
+            <h3>Project 1</h3>
+            <span>Web Site - Meli Quence</span>
+          </div>
+        </a>
+
+        <a href="#" class="project" target="_blank" data-type="qualification">
+          <img src="images/projects/project7.png" alt="project7" class="project__img">
+          <div class="project__description">
+            <h3>Project 1</h3>
+            <span>Web Site - Meli Quence</span>
+          </div>
+        </a>
+
+        <a href="#" class="project" target="_blank" data-type="site">
+          <img src="images/projects/project8.png" alt="project8" class="project__img">
           <div class="project__description">
             <h3>Project 1</h3>
             <span>Web Site - Meli Quence</span>
