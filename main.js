@@ -24,7 +24,7 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) { // 원하는 data가 아닐 경우, 함수 리턴(더이상 밑에 있는 코드가 실행되지 않도록)
     return;
   }
-  console.log(link);
+  // console.log(link);
   scrollToSection(link);
   // 메뉴 클릭으로 인해 섹션으로 스크롤 이동하고 나면 navbar 메뉴 다시 안보이도록 설정
   navbarMenu.classList.remove('open');
