@@ -108,6 +108,7 @@ p {
   color: var(--color-blue);
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 /* 자바스크립트 반응 */
