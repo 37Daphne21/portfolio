@@ -34,7 +34,6 @@ homeContactBtn.addEventListener('click', () => {
   scrollToSection('#contact');
 });
 
-
 // 스크롤 시 home의 컨텐츠들이 점점 투명해지도록
 const home = document.querySelector('#home');
 const homeHeight = home.getBoundingClientRect().height; // 748
@@ -69,21 +68,27 @@ workBtnContainer.addEventListener('click', (e) => {
     return;
   }
   // console.log(filter);
+
   projectContainer.classList.add('ani-out'); // opacity 0처리 애니효과
-
   setTimeout(() => {  // 3초 뒤 나올 컨텐츠 셋팅
-
-  projects.forEach((project) => {
-    // console.log(project.dataset.type);
-    if (filter === '*' || filter === project.dataset.type) { // filter값과 type이 동일한 data만 추출
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
-
+    projects.forEach((project) => {
+      // console.log(project.dataset.type);
+      if (filter === '*' || filter === project.dataset.type) { // filter값과 type이 동일한 data만 추출
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
     projectContainer.classList.remove('ani-out'); // opacity 1 처리
   },300);
+
+  // 활성화된 버튼에 selected 클래스 부여
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    /* span.category__count 때문에 생성
+    -> 클릭된 것이 button이면 그대로 target 진행, button이 아닐 경우 부모요소로 진행 */
+  target.classList.add('selected');
 });
 
 
