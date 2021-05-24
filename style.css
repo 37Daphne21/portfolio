@@ -99,12 +99,22 @@ p {
 /*********************** Contents ***********************/
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-blue);
+  background-color: transparent;
   align-items: center;
-  color: var(--color-white);
+  color: var(--color-blue);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+/* 자바스크립트 반응 */
+#navbar.navbar--dark {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 8px;
 }
 
 /* 로고가 이미지+텍스트일 경우
@@ -116,6 +126,7 @@ p {
 
 .navbar__logo img {
   width: 120px;
+  padding-left: 20px;
 }
 
 .navbar__menu {
@@ -136,6 +147,7 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-dark-blue);
+  color: var(--color-white);
 }
 
 .navbar__toggle-btn {
@@ -151,6 +163,7 @@ p {
 #home {
   background: url("images/background.png") center/cover no-repeat;
   padding: 50px;
+  padding-top:150px;
   text-align:center;
 }
 
