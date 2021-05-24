@@ -35,6 +35,19 @@ homeContactBtn.addEventListener('click',() => {
   scrollToSection('#contact');
 });
 
+
+// 스크롤 시 home의 컨텐츠들이 점점 투명해지도록
+const home = document.querySelector('#home');
+const homeHeight = home.getBoundingClientRect().height; // 748
+document.addEventListener('scroll', () => {
+  // console.log(1 - window.scrollY / homeHeight);
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+
+
 // 클릭 시 해당 섹션으로 스크롤 이동되는 함수 지정
 function scrollToSection(selector) {
   const scrollTo = document.querySelector(selector);
