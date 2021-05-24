@@ -26,6 +26,14 @@ navbarMenu.addEventListener('click', (event) => {
   }
   console.log(link);
   scrollToSection(link);
+  // 메뉴 클릭으로 인해 섹션으로 스크롤 이동하고 나면 navbar 메뉴 다시 안보이도록 설정
+  navbarMenu.classList.remove('open');
+});
+
+// small screen 에서 Navbar의 .toggle-btn 누르면 메뉴 보이도록
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
 });
 
 // Home의 Contact Me 버튼 클릭 시 #contact 섹션으로 스크롤 이동
