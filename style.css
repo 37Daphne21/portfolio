@@ -505,6 +505,26 @@ p {
   color: var(--color-pink);
 }
 
+/* arrow button */
+.arrow-up {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /*********************** 반응형 ***********************/
 /* For below 768px screen width */
