@@ -25,9 +25,11 @@ navbarMenu.addEventListener('click', (event) => {
     return;
   }
   // console.log(link);
-  scrollToSection(link);
-  // 메뉴 클릭으로 인해 섹션으로 스크롤 이동하고 나면 navbar 메뉴 다시 안보이도록 설정
   navbarMenu.classList.remove('open');
+  scrollToSection(link);
+  selectNavItem(target);
+  // 메뉴 클릭으로 인해 섹션으로 스크롤 이동하고 나면 navbar 메뉴 다시 안보이도록 설정
+
 });
 
 // small screen 에서 Navbar의 .toggle-btn 누르면 메뉴 보이도록
@@ -100,9 +102,75 @@ workBtnContainer.addEventListener('click', (e) => {
 });
 
 
+/////////////////////// 섹션 진입 시 메뉴 active ///////////////////////
+// 1. 모든 섹션 요소를 가지고 온다.
+// 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다. (모든 섹션들의 진입과 나가는 것을 관찰해야함)
+// 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다. 
+const sectionIds = [
+  '#home',
+  '#about',
+  '#skills',
+  '#work',
+  '#testimonials',
+  '#contact',
+];
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id =>
+  document.querySelector(`[data-link="${id}"]`)
+);
+
+let selectedNavIndex = 0;
+let selectedNavItem = navItems[0];
+function selectNavItem(selected) {
+  selectedNavItem.classList.remove('active');
+  selectedNavItem = selected;
+  selectedNavItem.classList.add('active');
+}
+
 /////////////////////// 사용자지정함수 ///////////////////////
 // 클릭 시 해당 섹션으로 스크롤 이동되는 함수 지정
 function scrollToSection(selector) {
   const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+  selectNavItem(navItems[sectionIds.indexOf(selector)]); // contact us, arrow-up 버튼 클릭 시에도 스크롤 이동 가능하도록
 }
+
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.3,
+};
+
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    // 콜백 안에서 해당하는 섹션을 찾아서 navbar 메뉴를 활성화 해주는 일
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) { // 첫 화면에서 testimonial이 잡히지 않도록
+      const index = sectionIds.indexOf(`#${entry.target.id}`);
+      // 스크롤링이 아래로 되어서 페이지가 올라옴
+      if (entry.boundingClientRect.y < 0) {
+        selectedNavIndex = index + 1;
+      } else {
+        selectedNavIndex = index - 1;
+      }
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section => observer.observe(section));
+
+//  
+window.addEventListener('wheel', () => { // 
+  if (window.scrollY === 0) { // 스크롤 top 0 일 경우
+    selectedNavIndex = 0;
+  } else if ( // 스크롤 제일 밑으로 도달 시
+    // window.scrollY + window.innerHeight === document.body.clientHeight 
+    Math.ceil(window.scrollY + window.innerHeight) >= document.body.clientHeight
+    /* 스크롤 해서 페이지 제일 아래로 내렸을경우, 
+    scrollY와 window창의 innerHeight 값을 더한값이
+    정확하게 일치 하지 않는 경우를 대비 */
+    ) { 
+    selectedNavIndex = navItems.length - 1; // 배열의 크기 6 - 1 = 마지막 인덱스값 5로
+  } 
+  selectNavItem(navItems[selectedNavIndex])
+});

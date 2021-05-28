@@ -141,6 +141,10 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 
+.navbar__menu__item.active {
+  border-color: var(--color-white);
+}
+
 .navbar__menu__item:hover {
   border-color: var(--color-white);
   background-color: var(--color-dark-blue);
