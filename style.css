@@ -109,19 +109,12 @@ p {
   z-index: 1;
 }
 
-/* 자바스크립트 반응 */
+  /* 자바스크립트 반응 */
 #navbar.navbar--dark {
   background-color: var(--color-blue);
   color: var(--color-white);
   padding: 8px;
 }
-
-/* 로고가 이미지+텍스트일 경우
-.navbar__logo {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
-}
-*/
 
 .navbar__logo img {
   width: 120px;
@@ -176,7 +169,7 @@ p {
 }
 
 .home__title,
-.home_description {
+.home__description {
   color: var(--color-white);
 }
 
@@ -388,7 +381,7 @@ p {
   transition: all var(--animation-duration) ease-out;
 }
 
-/* 각 .category__btn 클릭 시, 해당되지 않는 project들이 서서히 사라지게 보이는 ani 효과 */
+  /* 각 .category__btn 클릭 시, 해당되지 않는 project들이 서서히 사라지게 보이는 ani 효과 */
 .work__projects.ani-out {
   opacity: 0;
   transform: scale(0.97) translateY(20px);
@@ -516,17 +509,61 @@ p {
 }
 
 .contact__links {
-  font-size: var(--font-large);
   margin: 24px 0;
 }
 
-.contact__links i {
-  transition: all 0.2s ease-in;
+.contact__links a + a {
+  margin-left: 10px;
+}
+.contact__links a  {
+  position: relative;
 }
 
-.contact__links i:hover {
+  /* github, notion 아이콘*/
+.contact__links a i {
+  font-size: var(--font-large);
+  transition: all var(--animation-duration) ease-in;
+}
+
+.contact__links a i:hover {
   transform: scale(1.1);
   color: var(--color-pink);
+}
+
+  /* gitbub 말풍선*/
+a.link_git i:after {
+  content: 'GitHub';
+  position: absolute;
+  top: 0;
+  left: -80px;
+  background: var(--color-pink);
+  font-size: var(--font-micro);
+  width: 70px;
+  height: 27px;
+  line-height: 27px;
+  border-radius: 50px 50px 0 50px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+a.link_notion i:after { /* notion 말풍선*/
+  content: 'Notion';
+  position: absolute;
+  top: 0;
+  right: -80px;
+  background: var(--color-pink);
+  font-size: var(--font-micro);
+  width: 70px;
+  height: 27px;
+  line-height: 27px;
+  border-radius: 50px 50px 50px 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.contact__links i:hover::after {
+  opacity: 1;
+  color: var(--color-white);
 }
 
 /* arrow button */
@@ -547,7 +584,7 @@ p {
 }
 
 .arrow-up.visible {
-  opacity: 1;
+  opacity: 0.8;
   pointer-events: auto;
 }
 
@@ -661,6 +698,22 @@ p {
     order: 1;
   }
 
+  /* contact */
+  a.link_git i:after,
+  a.link_notion i:after {
+    width: 55px;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  a.link_git i:after {
+    left: -60px;
+  }
+
+  a.link_notion i:after {
+    right: -60px;
+  }
+  
   /* etc */
   .arrow-up {
     width: 40px;
