@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* 메인배너 */
+.mainbanner {width:100%; height:920px; overflow:hidden; text-align:center; position:relative;}
+.mainbanner img {position:absolute; top:0; left:0; right:0; margin:auto;}
+.mainbanner .color {z-index:2;}
+
+.inner {width:1280px; height:800px; margin:220px auto 0; position:relative; overflow:hidden;}
+button {width:140px; height:40px; border:none;}
+
+/* page title */
+h2 {text-align:center; letter-spacing:5px; font:normal 68px 'Noto Serif', serif; margin-top:200px;}
+/* section title */
+h3 {font:bold 30px 'Shippori Mincho', serif;}
+/* text */
+p {font:24px 'Noto Sans', sans-serif;}
+
+
+/*********************************** section1 시작 ***********************************/
+#section1 .inner {margin-top:80px}
+#section1 h3 {position:absolute; top:80px; left:360px;}
+#section1 .textbox {width:328px; height:400px; background:rgba(225,221,221,0.8); position:absolute; left:-200px; bottom:50px; transform:rotate(90deg); padding:0 36px; color:#414141;}
+#section1 .textbox span {display:block; font-size:24px; font-weight:bold; margin:150px 0px 40px; color:#000;}
+
+#section1 .imgbox {position:absolute; right:-200px;}
+#section1 .imgbox p {width:390px; height:50px; background:rgba(225,221,221,0.6); position:absolute; top:20px; right:20px; text-align:right; font:16px/1.5 'Noto Sans', sans-serif; padding:10px 25px;}
+#section1 .pan1 {position:absolute; left:10px; top:50px;}
+#section1 button {position:absolute; right:0; bottom:50px; width:250px; height:60px; background:transparent; border:2px solid #eb9389; color:#eb9389; font-size:24px; transition:0.3s;}
+#section1 button:hover {background:#eb9389; color:#fff;}
+#section1 button.firstbutton {bottom:120px;}
+
+
+/*********************************** section2 시작 ***********************************/
+#section2 .inner {overflow:visible;} /* .pan3 안잘리도록 */
+#section2_left {width:400px; float:left;}
+#section2_left .imgbox {width:400px; height:300px; overflow:hidden; position:relative;}
+#section2_left .imgbox img {position:absolute; top:0; left:0;}
+#section2_left .imgbox img:last-child {left:400px;}
+
+#section2_left h3 {margin:50px 0 70px;}
+#section2_left h3 button {width:20px; height:20px; margin-left:10px; background:#000; color:#fff; text-align:center; cursor:pointer;}
+#section2_left h3 button:hover {background:#eb9389; color:#000;}
+
+#section2_left .textbox {width:400px; height:135px; position:relative; overflow:hidden;}
+#section2_left .textbox p {width:400px; font-size:20px; position:absolute; bottom:0; left:0;}
+#section2_left .textbox p:last-child {left:400px;}
+
+#section2_right	{width:840px; padding-top:200px; height:500px; float:right; position:relative;}
+#section2_right span {float:left; font-weight:bold; font-family:'Shippori Mincho', serif; font-size:20px;}
+#section2_right img {float:right;}
+#section2_right .pan2 {position:absolute; top:0; left:0;}
+#section2 .pan3 {position:absolute; bottom:-20px; left:250px;}
+#section2 .pan3_1 {position:absolute; bottom:-20px; left:250px; opacity:0;}
+
+
+/*********************************** section3 시작 ***********************************/
+#section3 img {position:absolute;}
+#section3 .imgbox:nth-child(1) img:nth-child(1) {top:-200px; left:-150px;}
+#section3 .imgbox:nth-child(1) img:nth-child(2) {top:-200px; right:0;}
+#section3 .imgbox:nth-child(1) img:nth-child(3) {bottom:0; left:0;}
+#section3 .imgbox:nth-child(2) img:nth-child(1) {top:0; right:0;}
+#section3 .imgbox:nth-child(2) img:nth-child(2) {top:0; left:0;}
+#section3 .imgbox:nth-child(2) img:nth-child(3) {bottom:-40px; left:0;}
+#section3 .imgbox:nth-child(3) img:nth-child(1) {top:0; right:0;}
+#section3 .imgbox:nth-child(3) img:nth-child(2) {top:0; left:0;}
+#section3 .imgbox:nth-child(3) img:nth-child(3) {bottom:0; left:0;}
+#section3 .imgbox {opacity:0; transition:0.3s;}
+#section3 .on {opacity:1;}
+
+#section3 .pan_change_box {width:750px; height:600px; margin:0 auto; top:130px; position:relative; overflow:hidden;}
+#section3 .pan4 {top:0px; left:0px;}
+#section3 .pan5 {top:0px; left:750px;}
+#section3 .pan6 {top:0px; left:1500px;}
+
+#section3 .button_box {width:110px; height:auto; position:absolute; right:100px; top:375px; z-index:1;}
+#section3 .button_box div {width:15px; height:15px; border-radius:15px; box-sizing:border-box; background:#777; margin-right:20px; float:left; cursor:pointer;}
+#section3 .button_box .clicked_button {background:#eb9389; border:2px solid #666;}
+
+#section3 .textbox {width:360px; position:absolute; bottom:300px; right:-200px;}
+#section3 h3 {width:150px; font-size:36px; margin-top:20px;}
+#section3 p {margin-top:30px;}
+
+
+/*********************************** section4 시작 ***********************************/
+#section4 .inner {width:100%; height:920px; background:#eee9e9 url("../images/panpot_midbanner.jpg") top center no-repeat fixed;}
+#section4 .imgwrap {position:relative; width:1280px; height:780px; margin:0 auto; overflow:hidden;}
+#section4 .pot1 {position:absolute; top:-400px; left:275px;}
+#section4 .pot2 {position:absolute; bottom:0px; left:-550px; border:12px solid rgba(0,0,0,0.5)}
+#section4 .pot3 {position:absolute; bottom:160px; left:400px; border:12px solid rgba(0,0,0,0.5); opacity:0;}
+#section4 .textbox {position:absolute; top:140px; right:-400px; width:300px; height:270px; background:rgba(255,255,255,0.4);}
+#section4 .textbox h3 {text-align:right; font-size:26px; margin:30px 40px;}
+#section4 .textbox p {width:220px; margin:20px auto; font-family:'Shippori Mincho', serif; font-size:18px; text-align:right;}
+
+
+/*********************************** section5 시작 ***********************************/
+#section5 .imgbox_left {float:left; width:590px;}
+#section5 .imgbox_left h3 {height:50px; text-indent:-240px; font-size:36px; margin-bottom:125px;}
+#section5 .imgbox_left .imgbox1 {position:relative; width:580px; height:625px; cursor:pointer;}
+#section5 .imgbox_left .imgbox1 img:first-child {position:absolute; right:0; top:0; z-index:9;}
+#section5 .imgbox_left .imgbox1 img:last-child {position:absolute; left:0; bottom:0; opacity:0.2;}
+
+#section5 .imgbox_right {float:right; margin-right:-200px; width:580px; margin-top:80px; height:720px;}
+#section5 .imgbox_right h3 {float:left; width:210px; height:210px; font-size:20px; transform:rotate(90deg); font-weight:normal;}
+#section5 .imgbox_right p {clear:both; font:normal 20px 'Shippori Mincho', serif; padding:30px 0px 20px;}
+
+#section5 .imgbox_right .imgbox2 {position:relative; width:320px; height:320px; top:0; right:-260px; cursor:pointer;}
+#section5 .imgbox_right .imgbox2 img:first-child {position:absolute; left:0; top:0; z-index:9;}
+#section5 .imgbox_right .imgbox2 img:last-child {position:absolute; right:0; bottom:0; opacity:0.2;}
+
+#section5 .imgbox_right .imgbox3 {position:relative; width:580px; height:320px; cursor:pointer;}
+#section5 .imgbox_right .imgbox3 img:first-child {position:absolute; left:0; top:0; z-index:9;}
+#section5 .imgbox_right .imgbox3 img:last-child {position:absolute; right:0; bottom:0; opacity:0.2;}
+
+#section5 {padding-bottom:150px;}

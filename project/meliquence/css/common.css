@@ -1,0 +1,52 @@
+@charset "utf8";
+
+
+/*********************************** header 시작 ***********************************/
+
+* {margin:0; padding:0; list-style:none; font-family: 'Noto Sans', sans-serif; font-size:14px;}
+a {text-align:center; text-decoration:none;}
+body {background:#eee9e9; min-width:1280px;}
+#wrap {width:100%; min-width:1280px; height:auto; background:#eee9e9;}
+
+/* .clear:after {content:''; display:block; clear:both;} */
+header {width:100%; height:140px; background-color:rgba(0,0,0,0); position:fixed; top:0; transition:0.5s; z-index:999;}
+header .logo {width:200px; padding-top:30px; margin:0 auto; z-index:0;}
+header .logo_black {display:block;}
+header .logo_white {display:none;}
+
+/*	제이쿼리에서 부여
+header:hover {background-color:rgba(0,0,0,1);}
+header:hover .logo_black {display:none;}
+header:hover .logo_white {display:block;}
+header:hover .menubar>li a {color:#fff;}
+*/
+
+.menubarwrap {width:100%; height:60px; margin-top:10px;}
+.menubar {width:1050px; margin:0 auto; overflow:hidden;}
+.menubar > li {float:left; overflow:hidden;}
+.menubar > li a {display:block; width:150px; height:60px; line-height:60px; color:#000; font-weight:bold; transition:0.5s;}
+/* 메뉴바 hover 했을 때 서브메뉴 나오도록 */
+.menubar > li:hover .menu li a {height:60px; opacity:1;}
+
+.menubar .menu li a {width:150px; height:0px; line-height:60px; font-weight:normal; background-color:rgba(0,0,0,0.6); opacity:0; transition:0.2s;}
+/* 서브메뉴 li hover 했을 때 a 배경색상, 폰트색상 변경 */
+.menubar .menu li:hover a {background-color:rgba(0,0,0,1);}
+
+
+/*********************************** footer ***********************************/
+footer {position:relative; width:100%; min-width:1280px; height:850px; background:#000;}
+#footer_wrap {width:1040px; height:500px; position:fixed; bottom:0; left:0; right:0; margin:auto;}
+#footer_wrap #logo_box {text-align:center; border-bottom:1px solid #fff; padding:10px;}
+#footer_wrap ul {float:left; width:200px; margin:30px; height:40px;}
+#footer_wrap ul li:first-child {font-size:24px; color:#fff; letter-spacing:4px; font-weight:normal; padding-bottom:20px;}
+#footer_wrap ul li {height:10px; padding:10px; color:rgba(255,255,255,0.5); font-size:14px;}
+
+/*********************************** footer_hide ***********************************/
+footer {z-index:-99;}
+#footer_wrap {z-index:-1;}
+
+
+/************  top 버튼 ************/
+.top_scroll {width:40px; height:35px; background:rgba(255,255,255,0.7); color:#000; text-align:center; border-radius:40px; position:fixed; line-height:13px; padding-top:5px; bottom:50px; right:50px; cursor:pointer; z-index:3; transition:0.5s;}
+.top_scroll:hover {background:rgba(0,0,0,0.7); color:#fff;}
+
