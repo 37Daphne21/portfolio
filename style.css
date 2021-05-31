@@ -246,6 +246,7 @@ p {
 
 .major__description {
   font-size: var(--font-small);
+  padding: 10px;
 }
 
 .study {
@@ -332,8 +333,8 @@ p {
   padding: 20px;
 }
 
-/* Work */
-.work__categories {
+/* portfolio */
+.portfolio__categories {
   margin: 40px;
 }
 
@@ -373,7 +374,7 @@ p {
   transition: all var(--animation-duration);
 }
 
-.work__projects {
+.portfolio__projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -382,7 +383,7 @@ p {
 }
 
   /* 각 .category__btn 클릭 시, 해당되지 않는 project들이 서서히 사라지게 보이는 ani 효과 */
-.work__projects.ani-out {
+.portfolio__projects.ani-out {
   opacity: 0;
   transform: scale(0.97) translateY(20px);
 }
@@ -663,7 +664,7 @@ a.link_notion i:after { /* notion 말풍선*/
     flex-direction: column;
   }
 
-  /* work */
+  /* portfolio */
   .category__btn {
     width: 100%;
     margin: 4px 0;

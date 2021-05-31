@@ -69,10 +69,10 @@ arrowUp.addEventListener('click', () => {
 
 
 // Projects : 카테고리 버튼 클릭 시 필터링
-const workBtnContainer = document.querySelector('.work__categories');
-const projectContainer = document.querySelector('.work__projects');
+const portfolioBtnContainer = document.querySelector('.portfolio__categories');
+const projectContainer = document.querySelector('.portfolio__projects');
 const projects = document.querySelectorAll('.project');
-workBtnContainer.addEventListener('click', (e) => {
+portfolioBtnContainer.addEventListener('click', (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter; // || : span 안에 든 숫자 클릭시에도 적용될 수 있도록 지정
   if (filter == null) {
     return;
@@ -105,12 +105,12 @@ workBtnContainer.addEventListener('click', (e) => {
 /////////////////////// 섹션 진입 시 메뉴 active ///////////////////////
 // 1. 모든 섹션 요소를 가지고 온다.
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다. (모든 섹션들의 진입과 나가는 것을 관찰해야함)
-// 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다. 
+// 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
 const sectionIds = [
   '#home',
   '#about',
   '#skills',
-  '#work',
+  '#portfolio',
   '#testimonials',
   '#contact',
 ];
@@ -159,18 +159,18 @@ const observerCallback = (entries, observer) => {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
 
-//  
-window.addEventListener('wheel', () => { // 
+//
+window.addEventListener('wheel', () => { //
   if (window.scrollY === 0) { // 스크롤 top 0 일 경우
     selectedNavIndex = 0;
   } else if ( // 스크롤 제일 밑으로 도달 시
-    // window.scrollY + window.innerHeight === document.body.clientHeight 
+    // window.scrollY + window.innerHeight === document.body.clientHeight
     Math.ceil(window.scrollY + window.innerHeight) >= document.body.clientHeight
-    /* 스크롤 해서 페이지 제일 아래로 내렸을경우, 
+    /* 스크롤 해서 페이지 제일 아래로 내렸을경우,
     scrollY와 window창의 innerHeight 값을 더한값이
     정확하게 일치 하지 않는 경우를 대비 */
-    ) { 
+    ) {
     selectedNavIndex = navItems.length - 1; // 배열의 크기 6 - 1 = 마지막 인덱스값 5로
-  } 
+  }
   selectNavItem(navItems[selectedNavIndex])
 });
