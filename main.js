@@ -134,6 +134,7 @@ function scrollToSection(selector) {
   scrollTo.scrollIntoView({ behavior: 'smooth' });
   selectNavItem(navItems[sectionIds.indexOf(selector)]); // contact us, arrow-up 버튼 클릭 시에도 스크롤 이동 가능하도록
 }
+/////////////////////////////////////////////////////////////
 
 const observerOptions = {
   root: null,
@@ -160,7 +161,7 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
 
 //
-window.addEventListener('wheel', () => { //
+window.addEventListener('wheel', () => { // 계단식 이동 방지를 위해 scroll 대신 wheel 사용
   if (window.scrollY === 0) { // 스크롤 top 0 일 경우
     selectedNavIndex = 0;
   } else if ( // 스크롤 제일 밑으로 도달 시
