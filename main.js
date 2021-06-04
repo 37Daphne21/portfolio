@@ -15,6 +15,7 @@ document.addEventListener('scroll', () => {
   }
 });
 
+
 // navbar의 메뉴 클릭 시 해당 섹션으로 스크롤 이동
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
@@ -29,8 +30,8 @@ navbarMenu.addEventListener('click', (event) => {
   scrollToSection(link);
   selectNavItem(target);
   // 메뉴 클릭으로 인해 섹션으로 스크롤 이동하고 나면 navbar 메뉴 다시 안보이도록 설정
-
 });
+
 
 // small screen 에서 Navbar의 .toggle-btn 누르면 메뉴 보이도록
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
@@ -38,11 +39,13 @@ navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
 });
 
+
 // Home의 Contact Me 버튼 클릭 시 #contact 섹션으로 스크롤 이동
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
   scrollToSection('#contact');
 });
+
 
 // 스크롤 시 home의 컨텐츠들이 점점 투명해지도록
 const home = document.querySelector('#home');
@@ -51,6 +54,7 @@ document.addEventListener('scroll', () => {
   // console.log(1 - window.scrollY / homeHeight);
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
 
 // 스크롤 시 arrow-up 버튼 생성
 const arrowUp = document.querySelector('.arrow-up');
@@ -61,14 +65,33 @@ document.addEventListener('scroll', () => {
     arrowUp.classList.remove('visible');
   }
 });
-
 //  arrow-up 버튼 클릭 시 top으로 스크롤 이동
 arrowUp.addEventListener('click', () => {
   scrollToSection('#home');
 });
 
 
-// Projects : 카테고리 버튼 클릭 시 필터링
+// Skills 섹션 progress bar 애니메이션 효과
+const skills = document.querySelectorAll(".skill__value");
+const skillOption = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0,
+};
+const skillCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("move");
+    } else {
+      entry.target.classList.remove("move");
+    }
+  });
+};
+const skillObserver = new IntersectionObserver(skillCallback, skillOption);
+skills.forEach((skill) => skillObserver.observe(skill));
+
+
+// Work 섹션 > Projects : 카테고리 버튼 클릭 시 필터링
 const portfolioBtnContainer = document.querySelector('.portfolio__categories');
 const projectContainer = document.querySelector('.portfolio__projects');
 const projects = document.querySelectorAll('.project');
@@ -92,6 +115,7 @@ portfolioBtnContainer.addEventListener('click', (e) => {
     projectContainer.classList.remove('ani-out'); // opacity 1 처리
   },300);
 
+
   // 활성화된 버튼에 selected 클래스 부여
   const active = document.querySelector('.category__btn.selected');
   active.classList.remove('selected');
@@ -102,8 +126,9 @@ portfolioBtnContainer.addEventListener('click', (e) => {
 });
 
 
+
 /////////////////////// 섹션 진입 시 메뉴 active ///////////////////////
-// 1. 모든 섹션 요소를 가지고 온다.
+// 1. 모든 섹션 요소들과 메뉴아이템들을 가지고 온다
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다. (모든 섹션들의 진입과 나가는 것을 관찰해야함)
 // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
 const sectionIds = [
@@ -126,6 +151,7 @@ function selectNavItem(selected) {
   selectedNavItem = selected;
   selectedNavItem.classList.add('active');
 }
+
 
 /////////////////////// 사용자지정함수 ///////////////////////
 // 클릭 시 해당 섹션으로 스크롤 이동되는 함수 지정
@@ -160,17 +186,15 @@ const observerCallback = (entries, observer) => {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
 
-//
 window.addEventListener('wheel', () => { // 계단식 이동 방지를 위해 scroll 대신 wheel 사용
   if (window.scrollY === 0) { // 스크롤 top 0 일 경우
     selectedNavIndex = 0;
   } else if ( // 스크롤 제일 밑으로 도달 시
     // window.scrollY + window.innerHeight === document.body.clientHeight
-    Math.ceil(window.scrollY + window.innerHeight) >= document.body.clientHeight
-    /* 스크롤 해서 페이지 제일 아래로 내렸을경우,
-    scrollY와 window창의 innerHeight 값을 더한값이
-    정확하게 일치 하지 않는 경우를 대비 */
-    ) {
+    Math.ceil(window.scrollY + window.innerHeight) >= document.body.clientHeight) {
+      /* 스크롤 해서 페이지 제일 아래로 내렸을경우,
+      scrollY와 window창의 innerHeight 값을 더한값이
+      정확하게 일치 하지 않는 경우를 대비 */
     selectedNavIndex = navItems.length - 1; // 배열의 크기 6 - 1 = 마지막 인덱스값 5로
   }
   selectNavItem(navItems[selectedNavIndex])

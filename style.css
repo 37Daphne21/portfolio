@@ -141,7 +141,6 @@ p {
 }
 
 .navbar__menu__item:hover {
-  border-color: var(--color-white);
   background-color: var(--color-dark-blue);
   color: var(--color-white);
 }
@@ -320,6 +319,18 @@ p {
 .skill__value {
   height: 3px;
   background-color: var(--color-orange);
+}
+
+.skill__value.move {
+  animation: skillbar 2s 1;
+}
+
+@keyframes skillbar {
+  from {
+    width: 0;
+  }
+  to {
+  }
 }
 
 .skillset__right {
