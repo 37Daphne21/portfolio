@@ -147,7 +147,7 @@ p {
 
 .navbar__toggle-btn {
   position: absolute;
-  top:20px;
+  top:18px;
   right: 12px;
   font-size: var(--font-medium);
   color: var(--color-white);
@@ -156,7 +156,7 @@ p {
 
 /* Home */
 #home {
-  background: url("images/background.png") center/cover no-repeat;
+  background: url("../images/background.png") center/cover no-repeat;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
