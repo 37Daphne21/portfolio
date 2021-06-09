@@ -466,49 +466,79 @@ p {
   color: var(--color-white);
 }
 
-/* Testimonials */
-#testimonials {
+/* personality */
+#personality {
   background-color: var(--color-light-white);
 }
 
-.testimonials {
-  margin: 40px;
-}
-
-.testimonial {
+.personality__chart {
   display: flex;
-  justify-content: center;
-  margin: 32px 0;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 80px 0;
+  opacity: 0;
 }
 
-.testimonial__avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+.chart {
+  width: 200px;
+  height: 250px;
+  margin: 20px;
 }
 
-.testimonial__avatar:nth-child(odd) {
-  margin-right: 40px;
+.chart__percent {
+  width: 200px;
+  height: 200px;
 }
 
-.testimonial__avatar:nth-child(even) {
-  margin-left: 40px;
+.personality__bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap:wrap;
 }
 
-.testimonial__speach-bubble {
-  padding: 18px;
-  background-color: white;
-  border-radius: var(--size-border-radius);
+.bar {
+  width: 35%;
+  margin: 40px 80px 50px 0;
+  position: relative;
 }
 
-.testimonial__speach-bubble p {
-  color: var(--color-light-grey);
+.bar__progress {
+  height: 15px;
+  background-color: var(--color-dark-white);
 }
 
-.testimonial__speach-bubble a {
-  color: var(--color-peach);
-  font-size: var(--font-micro);
+.progress__fill {
+  width: 10%;
+  height: 25px;
+  background-color: var(--color-dark-blue);
+  transform: translateY(-5px);
+}
+
+.bar__percent {
+  position: absolute;
+  top: -20px;
+  right: -80px;
+  color: var(--color-dark-blue);
+  font-weight: var(--weight-bold);
+  font-size: var(--font-medium);
+}
+
+.bar__description {
+  font-size: var(--font-regular);
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  color: var(--color-dark-grey);
   font-weight: var(--weight-semi-bold);
+}
+
+.bar__description i {
+  font-size: 26px;
+  position: relative;
+  top: 3px;
+  left: 10px;
 }
 
 /* Contact */
@@ -591,7 +621,6 @@ a.link_notion i:after { /* notion 말풍선*/
   right: 40px;
   width: 50px;
   height: 50px;
-  line-height: 50px;
   font-size: 30px;
   color: var(--color-white);
   background-color: var(--color-pink);
@@ -695,25 +724,15 @@ a.link_notion i:after { /* notion 말풍선*/
     flex-grow: 1;
   }
 
-  /* testimonial */
-  .testimonial {
-    flex-direction: column;
-    align-items: center;
+  /* personality */
+  .bar {
+    width: 85%;
+    margin-right: 70px;
   }
 
-  .testimonial__avatar {
-    width: 120px;
-    height: 120px;
-  }
-
-  .testimonial__avatar:nth-child(even),
-  .testimonial__avatar:nth-child(odd) {
-    margin: 0;
-    margin-bottom: 10px;
-  }
-
-  .testimonial__speach-bubble {
-    order: 1;
+  .bar__percent {
+    top: -13px;
+    right: -70px;
   }
 
   /* contact */
@@ -731,7 +750,7 @@ a.link_notion i:after { /* notion 말풍선*/
   a.link_notion i:after {
     right: -60px;
   }
-  
+
   /* etc */
   .arrow-up {
     width: 40px;
@@ -753,9 +772,5 @@ a.link_notion i:after { /* notion 말풍선*/
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
-  }
-
-  #testimonials {
-    padding: 50px 0;
   }
 }
