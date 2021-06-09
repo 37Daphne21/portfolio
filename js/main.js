@@ -91,7 +91,7 @@ const skillObserver = new IntersectionObserver(skillCallback, skillOption);
 skills.forEach((skill) => skillObserver.observe(skill));
 
 
-// Work 섹션 > Projects : 카테고리 버튼 클릭 시 필터링
+// Portfolio 섹션 > Projects : 카테고리 버튼 클릭 시 필터링
 const portfolioBtnContainer = document.querySelector('.portfolio__categories');
 const projectContainer = document.querySelector('.portfolio__projects');
 const projects = document.querySelectorAll('.project');
@@ -126,7 +126,6 @@ portfolioBtnContainer.addEventListener('click', (e) => {
 });
 
 
-
 /////////////////////// 섹션 진입 시 메뉴 active ///////////////////////
 // 1. 모든 섹션 요소들과 메뉴아이템들을 가지고 온다
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다. (모든 섹션들의 진입과 나가는 것을 관찰해야함)
@@ -136,7 +135,7 @@ const sectionIds = [
   '#about',
   '#skills',
   '#portfolio',
-  '#testimonials',
+  '#personality',
   '#contact',
 ];
 const sections = sectionIds.map(id => document.querySelector(id));
@@ -171,7 +170,7 @@ const observerOptions = {
 const observerCallback = (entries, observer) => {
   entries.forEach(entry => {
     // 콜백 안에서 해당하는 섹션을 찾아서 navbar 메뉴를 활성화 해주는 일
-    if (!entry.isIntersecting && entry.intersectionRatio > 0) { // 첫 화면에서 testimonial이 잡히지 않도록
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) { // 첫 화면에서 personality이 잡히지 않도록
       const index = sectionIds.indexOf(`#${entry.target.id}`);
       // 스크롤링이 아래로 되어서 페이지가 올라옴
       if (entry.boundingClientRect.y < 0) {
