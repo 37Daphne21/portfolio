@@ -14,6 +14,7 @@
   <!-- External Link -->
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
+  <script src="js/jquery.js" defer></script>
 
   <!-- jQuery -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -23,37 +24,6 @@
   <!-- FONT / noto sans / Kr -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-  <script>
-// Personality 섹션 Progress Bar
-$(document).ready(function() {
-  // doughnut .chart plug-in
-  $('.chart__percent').percentageLoader({
-    valElement: 'span',
-    strokeWidth: 40,
-    bgColor: '#c0d8e9',
-    ringColor: '#73aace',
-    textColor: '#4d4d4d',
-    fontSize: '24px',
-    fontWeight: 'bold'
-  });
-
-  // scroll 시 .chart, .bar 의 opacity
-  $(window).scroll(function() {
-    var itemScrollTop = $(window).scrollTop() + $(window).height();
-    var chartHeight = $('.personality__chart').offset().top + ($('.personality__chart').outerHeight()/5);
-    if ( itemScrollTop >= chartHeight ) {
-      $('.personality__chart').animate({'opacity':'1'},1000);
-    }
-
-    var barHeight = $('.bar__description').offset().top + $('.bar__description').outerHeight();
-    if ( itemScrollTop >= barHeight ) {
-      $('.progress__fill').animate({'width':'100%'},1000);
-    }
-  });
-});s
-
-  </script>
 </head>
 <body>
   <!-- Navbar -->
@@ -195,6 +165,7 @@ $(document).ready(function() {
           <ul class="etc__list">
             <li><span>Git & Github</span></li>
             <li><span>Notion</span></li>
+            <li><span>Dothome</span></li>
             <li><span>PowerPoint</span></li>
           </ul>
         </div>
