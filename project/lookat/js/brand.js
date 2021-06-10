@@ -222,31 +222,33 @@ $(document).ready(function(){
 
 //////////////////////////// 스크롤반응 ////////////////////////////
 $(window).scroll(function(){
-	var sc = $(this).scrollTop()
-	$("#sc").html(sc);
-// section1
-	if(sc >= 600){
+	var sc = $(this).scrollTop() + $(this).height();
+	var section1Height = $("#section1").offset().top + ($("#section1").outerHeight()/3);
+	var section2Height = $("#section2").offset().top + ($("#section2").outerHeight()/3);
+	var section3Height = $("#section3").offset().top + ($("#section3").outerHeight()/3);
+	var section5Height = $("#section5").offset().top + ($("#section5").outerHeight()/3);
+
+	// section1
+	if( sc >= section1Height ){
 		$("#section1 .book").animate({"top":"140px"},800);
 		$("#section1 .page1 h2").delay(700).animate({"top":"50px"},800);
 	}
 
 // section2
-	if(sc >= 1500){
+	if( sc >= section2Height ){
 		$("#section2 .mouse").animate({"top":"100px"},1000);
 		$("#section2 .contents h2").animate({"opacity":"1"},1000);
 	}
 
 // section3
-	if(sc >= 2700){
+	if( sc >= section3Height ){
 		$("#section3 h2").animate({"left":"510px","top":"350px","font-size":"50px","opacity":"1"},1000)
 		.css("color","#000");
-	}
-	if(sc >= 3000){
 		$("#section3 div:has(h3)").slideDown();
 	}
 
 // section5
-	if(sc >= 4700){
+	if( sc >= section5Height ){
 		$("#section5 .inner > img").animate({"opacity":"0.6"},500);
 		$("#section5 .img_box .photo1").animate({"top":"130px"},1000);
 		$("#section5 .img_box .photo2").delay(1000).animate({"top":"140px"},1000);
