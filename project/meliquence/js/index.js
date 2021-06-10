@@ -83,18 +83,19 @@ $(document).ready(function(){
 
 
 //////////////////////////// 스크롤반응 ////////////////////////////
-
 	$(window).scroll(function(){
-		var sc = $(this).scrollTop()
+		var sc = $(this).scrollTop() + $(this).height();
+		var section3Height = $("#section3").offset().top + ($("#section3").outerHeight()/2);
+
 		// 메인배너 애니메이션 멈춤
-		if(sc >= 700){
+		if(sc >= 1500){
 			$(".mainbanner img").stop().animate(function(){
 				preventDefault();
 			});
 		}
 
 		// section3 이미지들 자리잡기
-		if(sc >= 2600){
+		if( sc >= section3Height ){
 			var img1 = $("#section3 .inner > img:nth-child(2)")
 			var img2 = $("#section3 .inner > img:nth-child(3)")
 			var img3 = $("#section3 .inner > img:nth-child(4)")

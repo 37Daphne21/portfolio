@@ -137,43 +137,41 @@ $(document).ready(function(){
 
 //////////////////////////// 스크롤반응 ////////////////////////////
 $(window).scroll(function(){
-	var sc = $(this).scrollTop()
+	var sc = $(this).scrollTop() + $(this).height();
+	var section1Height = $("#section1").offset().top + ($("#section1").outerHeight()/2);
+	var section2Height = $("#section2").offset().top + ($("#section2").outerHeight()/2);
+	var section3Height = $("#section3").offset().top + ($("#section3").outerHeight()/2);
+	var section4Height = $("#section4").offset().top + ($("#section4").outerHeight()/2);
+	var section5Height = $("#section5").offset().top + ($("#section5").outerHeight()/2);
+
 
 // section1
-	if(sc >= 600){
+	if( sc >= section1Height ){
 		$("#section1 .imgbox").animate({"right":"0"},500);
-	}
-	if(sc >= 800){
 		$("#section1 .textbox").animate({"left":"0"},500);
 	}
 
 // section2
-	if(sc >= 1700){
+	if( sc >= section2Height ){
 		$("#section2 #section2_left").animate({"paddingTop":"100px"},500);
 	}
 
 // section3
-	if(sc >= 2400){
+	if( sc >= section3Height ){
 		$("#section3 .imgbox:nth-child(1) img").animate({"marginTop":"200px"},500);
-	}
-	if(sc >= 2900){
 		$("#section3 .textbox").animate({"right":"0"},500);
 	}
 
 // section4
-	if(sc >= 3600){
+	if( sc >= section4Height ){
 		$("#section4 .pot1").animate({"top":"42px"},700);
-	}
-	if(sc >= 3700){
 		$("#section4 .textbox").delay(200).animate({"right":"0"},700);
-	}
-	if(sc >= 3900){
 		$("#section4 .pot2").animate({"left":"0"},700,function(){
 			$("#section4 .pot3").animate({"opacity":"1"},500);
 		});
 	}
 // section5
-	if(sc >= 4800){
+	if( sc >= section5Height ){
 		$("#section5 .imgbox_left h3").animate({"text-indent":"30px"},500);
 		$("#section5 .imgbox_right").animate({"marginRight":"0"},500);
 	}
