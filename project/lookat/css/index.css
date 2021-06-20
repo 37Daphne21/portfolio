@@ -24,9 +24,9 @@ h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 #section1 .polaroid p {position:absolute; bottom:-100px; left:20px; color:#918675;}
 #section1 .img_box {width:400px; height:350px; margin:0 auto; overflow:hidden; position:relative; top:20px;}
 #section1 .img_box img {position:absolute; top:-205px; width:100%; transition:1s;}
-#section1 .img_box h1 {position:absolute; top:100px; left:90px; z-index:1; color:#918675; font:bold 50px 'Brygada 1918', serif; transition:opacity 1s;}
+#section1 .img_box h2 {position:absolute; top:100px; left:90px; z-index:1; color:#918675; font:bold 50px 'Brygada 1918', serif; transition:opacity 1s;}
 #section1 .polaroid:hover .img_box img {top:0;}
-#section1 .polaroid:hover .img_box h1 {opacity:0;}
+#section1 .polaroid:hover .img_box h2 {opacity:0;}
 
 #section1 .right_section {float:right; width:640px; height:800px; background:#bdae9c; overflow:hidden;}
 #section1 .imgbox_move {width:640px; height:1800px; background:#bdae9c; position:relative; transition:3s ease-in-out;}

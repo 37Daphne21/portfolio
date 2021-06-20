@@ -216,7 +216,7 @@ $(window).scroll(function(){
 // #section1
 	if( sc >= section1Height ){
 		$("#section1 .polaroid").slideDown(1000)
-		$("#section1 .img_box h1").animate({"color":"#fff"},2000);
+		$("#section1 .img_box h2").animate({"color":"#fff"},2000);
 		$("#section1 .polaroid p").delay(500).animate({"bottom":"20px"},1000);
 	}
 
