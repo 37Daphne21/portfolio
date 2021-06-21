@@ -253,7 +253,7 @@ $(window).scroll(function(){
 
 	if( sc >= section5Height ){
 		$("#section5 .service_wrap .img2").animate({"top":"210px","opacity":"1"},500);
-		$("img[class ^= img1]").delay(500).animate({"left":"90px","opacity":"1"},500);
+		$("img[class ^= img1_]").delay(500).animate({"left":"90px","opacity":"1"},500);
 	}
 	if( sc >= section5Height2 ){
 		$("#section5 .service_wrap .img3").animate({"bottom":"0","opacity":"1"},500);
