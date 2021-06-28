@@ -5,7 +5,7 @@
 /* common */
 .inner {width:1280px; margin:0 auto; position:relative; overflow:hidden;}
 .clear:after {content:''; display:block; clear:both;}
-button {width:170px; height:50px; border:none; font:bold 22px 'Brygada 1918', serif;}
+.button {width:170px; height:50px; border:none; font:bold 22px 'Brygada 1918', serif;}
 h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 section {margin-top: 200px;}
 
