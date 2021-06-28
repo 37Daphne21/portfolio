@@ -2,42 +2,37 @@
 #sc { font-size:100px; color:blue; position: fixed; left: 0; top: 0; z-index: 999999999; }
 
 /* :after {content:''; display:block; clear:both;} */
-/* reset */
-.inner {width:1280px; height:800px; margin:200px auto 0; position:relative; overflow:hidden;}
+/* common */
+.inner {width:1280px; margin:0 auto; position:relative; overflow:hidden;}
+.clear:after {content:''; display:block; clear:both;}
 button {width:170px; height:50px; border:none; font:bold 22px 'Brygada 1918', serif;}
 h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
+section {margin-top: 200px;}
 
 /* main_banner */
-.main_banner {width:100%; height: 920px; background:#fff url("../images/index/main_banner.jpg") 50%/cover;}
-.main_banner .banner {opacity:1;}
-.main_banner .banner_blur {opacity:0;}
-.main_banner .mouse_wrap { width:100px; height:100px; position:absolute; bottom:20%; right:30%;}
-.main_banner .mouse_wrap p {font-size:18px; text-align:center; margin-top:80px; color:rgb(240, 240, 240);}
-.main_banner .mouse {position: absolute; width:25px; height:35px; border:3px solid #fff; left:0; top:0; bottom:0; right:0; margin:auto; border-radius:25px;}
-.main_banner .wheel {width:5px; height:10px; border-radius:10px; background-color: #fff; position: absolute; left: 0; right:0; top:5px; position: absolute; margin:auto;}
-
+.main_banner {width:100%; height:940px; background:#fff url("../images/index/main_banner.jpg") left 20%/cover;}
 
 /*********************************** section1 시작 ***********************************/
-#section1 .left_section {float:left; width:640px; height:800px; background:#e2d8cb;}
-#section1 .polaroid {width:440px; height:540px; margin:125px auto; background:#fff; position:relative; display:none; overflow:hidden;}
+#section1 .left_section {float:left; width:50%; height:800px; background:#e2d8cb;}
+#section1 .polaroid {width:70%; height:540px; margin:125px auto; background:#fff; position:relative; display:none; overflow:hidden;}
 #section1 .polaroid p {position:absolute; bottom:-100px; left:20px; color:#918675;}
-#section1 .img_box {width:400px; height:350px; margin:0 auto; overflow:hidden; position:relative; top:20px;}
+#section1 .img_box {width:90%; height:350px; margin:0 auto; overflow:hidden; position:relative; top:20px;}
 #section1 .img_box img {position:absolute; top:-205px; width:100%; transition:1s;}
 #section1 .img_box h2 {position:absolute; top:100px; left:90px; z-index:1; color:#918675; font:bold 50px 'Brygada 1918', serif; transition:opacity 1s;}
 #section1 .polaroid:hover .img_box img {top:0;}
 #section1 .polaroid:hover .img_box h2 {opacity:0;}
 
-#section1 .right_section {float:right; width:640px; height:800px; background:#bdae9c; overflow:hidden;}
-#section1 .imgbox_move {width:640px; height:1800px; background:#bdae9c; position:relative; transition:3s ease-in-out;}
-    .imgbox_move img, .imgbox_move p {position:absolute; color:#fff;}
-    .imgbox_move .img2 {right:120px; top:270px;}
-    .imgbox_move .txt1 {right:40px; top:600px; font:bold 68px 'Brygada 1918', serif; text-align:right;}
-    .imgbox_move .img3 {left:120px; top:800px;}
-    .imgbox_move .img4 {right:0; top:940px;}
-    .imgbox_move .txt2 {left:40px; bottom:540px; font:bold 48px 'Brygada 1918', serif;}
-    .imgbox_move .img5 {left:0; bottom:0;}
-    .imgbox_move .txt3 {right:40px; bottom:250px; font-size:36px;}
-    .imgbox_move .txt4 {right:40px; bottom:55px; text-align:right; font-size:24px;}
+#section1 .right_section {float:right; width:50%; height:800px; background:#bdae9c; overflow:hidden;}
+#section1 .imgbox_move {width:100%; height:1800px; background:#bdae9c; position:relative; transition:3s ease-in-out;}
+.imgbox_move img, .imgbox_move p {position:absolute; color:#fff;}
+.imgbox_move .img2 {right:120px; top:270px;}
+.imgbox_move .txt1 {right:40px; top:600px; font:bold 68px 'Brygada 1918', serif; text-align:right;}
+.imgbox_move .img3 {left:120px; top:800px;}
+.imgbox_move .img4 {right:0; top:940px;}
+.imgbox_move .txt2 {left:40px; bottom:540px; font:bold 48px 'Brygada 1918', serif;}
+.imgbox_move .img5 {left:0; bottom:0;}
+.imgbox_move .txt3 {right:40px; bottom:250px; font-size:36px;}
+.imgbox_move .txt4 {right:40px; bottom:55px; text-align:right; font-size:24px;}
 #section1 .right_section:hover .imgbox_move {transform:translateY(-1000px);}
 
 
@@ -59,9 +54,8 @@ h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 
 
 /*********************************** section3 시작 ***********************************/
-#section3 {background:url("../images/index/section3_bgimg.jpg") 50%/cover;}
-#section3 .inner {height:940px;}
-#section3 .img_wrap {width:1280px; height:730px; margin:auto; background:rgba(0,0,0,0); position:relative; top:105px; overflow:hidden; transition:background 0.5s;}
+#section3 {height:940px; background:url("../images/index/section3_bgimg.jpg") 50%/cover;}
+#section3 .img_wrap {width:1280px; height:740px; margin:100px auto; background:rgba(0,0,0,0); overflow:hidden; transition:background 0.5s; position:relative;}
 #section3 .img_wrap img {position:absolute;}
 #section3 .img_wrap .img1 {top:95px; left:-400px;}
 #section3 .img_wrap .img2 {top:-200px; left:640px;}
@@ -69,10 +63,10 @@ h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 #section3 .img_wrap .img4 {bottom:-250px; left:590px;}
 #section3 .img_wrap .arrow {bottom:200px; right:150px;}
 
-#section3 .img_wrap .play_btn, .revert_btn {position:absolute; width:65px; height:65px; bottom:70px; right:125px; cursor:pointer;}
+#section3 .img_wrap .play_btn, .revert_btn {position:absolute; width:65px; height:65px; bottom:0px; right:125px; cursor:pointer;}
 #section3 .img_wrap .play {opacity:1;}
 #section3 .img_wrap .play_h {opacity:0;}
-#section3 .img_wrap h2 {width:1190px; height:130px; text-align:center; position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; font:bold 55px 'Brygada 1918', serif; color:#66594a; display:none;}
+#section3 .img_wrap h2 {height:130px; text-align:center; position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; font:bold 55px 'Brygada 1918', serif; color:#66594a; display:none;}
 #section3 .img_wrap .revert_btn {display:none;}
 /*
 #section3 .img_wrap .img1 {top:95px; left:90px;}
@@ -85,7 +79,7 @@ h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 
 
 /*********************************** section4 시작 ***********************************/
-
+#section4 .inner {height:800px;}
 #section4 h2 {position:absolute; top:-200px; left:640px; color:#918675; text-align:center;}
 #section4 .img_box {position:absolute; display:none;}
 #section4 .box1 {width:500px; height:500px; top:0; left:0;}
@@ -98,15 +92,15 @@ h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 #section4 .more_box img {position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; opacity:0; transition:0.7s;}
 #section4 .more_box:hover img {opacity:0.7;}
 
-#section4 .detail_box_wrap {position:absolute; top:90px; left:270px; width:740px; height:480px; overflow:hidden; display:none;}
+#section4 .detail_box_wrap {background:red; position:absolute; top:90px; left:270px; width:60%; height:60%; overflow:hidden; display:none;}
 #section4 .detail_box {width:100%; height:100%; position:relative;}
 #section4 .exit_btn {position:absolute; width:35px; height:35px; top:12px; right:12px; cursor:pointer; z-index:1;}
 #section4 .exit {position:absolute; display:block;}
 #section4 .exit_h {position:absolute; display:none;}
-#section4 .detail_img img {position:absolute; top:0; left:0; display:none;}
+#section4 .detail_img img {width:100%; position:absolute; top:0; left:0; display:none;}
 #section4 .detail_text {width:100%; height:50px; position:relative; top:430px; background:rgba(255,255,255,0.6);}
 #section4 .detail_text p {position:absolute; font-size:24px; font-weight:bold; line-height:55px; text-indent:20px; color:#000; display:none;}
-#section4 .detail_text button {position:absolute; bottom:0; right:0; font:bold 22px 'Brygada 1918', serif; background:#918675; color:#000; transition:0.5s;}
+#section4 .detail_text button {width:20%; position:absolute; bottom:0; right:0; font:bold 22px 'Brygada 1918', serif; background:#918675; color:#000; transition:0.5s;}
 #section4 .detail_text button:hover {background:#66594a; color:#fff;}
 
 #section4 .detail_box .active {display:block;}
