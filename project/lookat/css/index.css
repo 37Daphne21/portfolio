@@ -61,9 +61,6 @@ h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 
 /*********************************** section3 시작 ***********************************/
 #section3 {background:url("../images/index/section3_bgimg.jpg") center center no-repeat;}
-@media (max-width:1280px) {
-    #section3 {width:1280px;}
-}
 #section3 .inner {height:940px;}
 #section3 .img_wrap {width:1280px; height:730px; margin:auto; background:rgba(0,0,0,0); position:relative; top:105px; overflow:hidden; transition:background 0.5s;}
 #section3 .img_wrap img {position:absolute;}
@@ -163,3 +160,7 @@ h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 #section5 .collection_wrap p {position:absolute; top:40px; left:410px; width:220px; height:140px; background:rgba(77,77,77,0.2); padding:40px; color:#4d4d4d; font-size:24px;}
 
 
+/*********************************** 반응형 ***********************************/
+@media (max-width:1280px) {
+    #section3 {width:1280px;}
+}

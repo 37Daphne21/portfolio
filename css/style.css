@@ -762,7 +762,7 @@ a.link_notion i:after { /* notion 말풍선*/
   }
 }
 
-
+/* For below 580px screen width */
 @media screen and (max-width: 580px) {
   .about__majors {
     margin-bottom: 20px;
