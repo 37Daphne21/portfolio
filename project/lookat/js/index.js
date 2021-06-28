@@ -1,23 +1,5 @@
 $(document).ready(function(){
-	$(".main_banner img").animate({top:0},1000);
-	$(".main_banner .banner_blur").animate({"opacity":"1"},1000);
-
-////////////////////////////////// banner //////////////////////////////////
-// 배너 mousemove 시 투명도 조절(블러 -> 선명)
-	var opa =1;
-	$(window).mousemove(function(){
-		opa = opa - 0.004;
-		$(".main_banner .banner_blur").css({"opacity":opa});
-	});
-// 배너 마우스 아이콘 움직임(mousemove)
-	$(".main_banner .mouse").animate({"left":"10px"}, 800, function ani(){
-		$(".main_banner .mouse").animate({"left":"-10px"}, 800);
-		$(".main_banner .mouse").animate({"left":"10px"}, 800, ani);
-	});
-
-////////////////////////////////// section2 //////////////////////////////////
-
-
+////////////////////////////////// section1 //////////////////////////////////
 // 안경 드래그 시 안경 낀 여자 이미지로 변환
 	$("#section2 .glasses img").draggable({
 		containment:"#section2",

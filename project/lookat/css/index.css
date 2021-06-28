@@ -4,12 +4,11 @@
 /* :after {content:''; display:block; clear:both;} */
 /* reset */
 .inner {width:1280px; height:800px; margin:200px auto 0; position:relative; overflow:hidden;}
-button {width:170px; height:50px; border:none; font:bold 22px 'Brygada 1918', serif; }
+button {width:170px; height:50px; border:none; font:bold 22px 'Brygada 1918', serif;}
 h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 
 /* main_banner */
-.main_banner {position:relative; width:100%; min-width:1280px; height:940px; overflow:hidden;}
-.main_banner img {position:absolute; top:-300px;; left:0; right:0; margin:auto;}
+.main_banner {width:100%; height: 920px; background:#fff url("../images/index/main_banner.jpg") 50%/cover;}
 .main_banner .banner {opacity:1;}
 .main_banner .banner_blur {opacity:0;}
 .main_banner .mouse_wrap { width:100px; height:100px; position:absolute; bottom:20%; right:30%;}
@@ -43,7 +42,7 @@ h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 
 
 /*********************************** section2 시작 ***********************************/
-#section2 .inner {height:840px; background:#fff url("../images/index/section2_bg.png");}
+#section2 .inner {height:840px; background:#fff url("../images/index/section2_bg.png") 50%/cover;}
 #section2 h2 {text-align:right; padding:20px 30px;}
 #section2 p {position:absolute; top:180px; left:-175px; font-size:48px; color:#fff;}
 #section2 img {position:absolute;}
@@ -60,7 +59,7 @@ h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 
 
 /*********************************** section3 시작 ***********************************/
-#section3 {background:url("../images/index/section3_bgimg.jpg") center center no-repeat;}
+#section3 {background:url("../images/index/section3_bgimg.jpg") 50%/cover;}
 #section3 .inner {height:940px;}
 #section3 .img_wrap {width:1280px; height:730px; margin:auto; background:rgba(0,0,0,0); position:relative; top:105px; overflow:hidden; transition:background 0.5s;}
 #section3 .img_wrap img {position:absolute;}
@@ -162,5 +161,7 @@ h2 {font-size:36px; font-family: 'Brygada 1918', serif;}
 
 /*********************************** 반응형 ***********************************/
 @media (max-width:1280px) {
-    #section3 {width:1280px;}
+    /* .inner {width:100%;} */
+
+    /* #section1 *{float: none !important;} */
 }
