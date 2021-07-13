@@ -188,13 +188,6 @@ $(window).scroll(function(){
 	var section5Height = $("#section5").offset().top + ($("#section5").outerHeight()/3);
 	var section5Height2 = $("#section5").offset().top + ($("#section5").outerHeight()/2);
 
-// banner ani 멈춤
-	if(sc >= 1000){
-		$(".main_banner .mouse").animate(function(){
-			preventDefault();
-		});
-	}
-
 // #section1
 	if( sc >= section1Height ){
 		$("#section1 .polaroid").slideDown(1000)
