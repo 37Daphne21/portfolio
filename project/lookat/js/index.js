@@ -39,7 +39,7 @@ $(document).ready(function(){
 		$("#section3 .play_btn, #section3 .revert_btn").animate({"bottom":"170px"},500);
 		$("#section3 .img_wrap button").slideDown(500);
 		$("#section3 .img_wrap").css({"background":"rgba(0,0,0,0.3)"})
-		$("#section3 .img_wrap h2").slideDown(500).animate({"font-size":"110px"},500).animate({"opacity":"0.3"},2000);
+		$("#section3 .img_wrap h2").slideDown(500).animate({"font-size":"5em"},500).animate({"opacity":"0.3"},2000);
 		$("#section3 .img_wrap .img1").delay(1000).animate({"left":"90px"},500);
 		$("#section3 .img_wrap .img2").delay(1600).animate({"top":"50px"},500);
 		$("#section3 .img_wrap .img3").delay(2200).animate({"right":"90px"},500);
@@ -57,7 +57,7 @@ $("#section3 .revert_btn").click(function(){
 	$("#section3 .play_btn, #section3 .revert_btn").animate({"bottom":"70px"},500);
 	$("#section3 .img_wrap button").slideUp(500);
 	$("#section3 .img_wrap").css({"background":"transparent"})
-	$("#section3 .img_wrap h2").slideUp(500).animate({"font-size":"55px"},500).animate({"opacity":"1"},500);
+	$("#section3 .img_wrap h2").slideUp(500).animate({"font-size":"2.4em"},500).animate({"opacity":"1"},500);
 	$("#section3 .img_wrap .img1").delay(600).animate({"left":"-400px"},500);
 	$("#section3 .img_wrap .img2").delay(1200).animate({"top":"-200px"},500);
 	$("#section3 .img_wrap .img3").delay(1800).animate({"right":"-290px"},500);
@@ -182,6 +182,7 @@ $("#section3 .revert_btn").click(function(){
 $(window).scroll(function(){
 	var sc = $(this).scrollTop() + $(this).height();
 	var section1Height = $("#section1").offset().top + ($("#section1").outerHeight()/3);
+	var section1Height2 = $("#section1").offset().top + ($("#section1").outerHeight()/10);
 	var section2Height = $("#section2").offset().top + ($("#section2").outerHeight()/3);
 	var section2Height2 = $("#section2").offset().top + ($("#section2").outerHeight()/2);
 	var section4Height = $("#section4").offset().top + ($("#section4").outerHeight()/3);
@@ -193,6 +194,14 @@ $(window).scroll(function(){
 		$("#section1 .polaroid").slideDown(1000)
 		$("#section1 .img_box h2").animate({"color":"#fff"},2000);
 		$("#section1 .polaroid p").delay(500).animate({"bottom":"20px"},1000);
+	}
+
+	if( $(document).width() < 1297 ) {
+		if( sc >= section1Height2 ){
+			$("#section1 .polaroid").slideDown(1000)
+			$("#section1 .img_box h2").animate({"color":"#fff"},2000);
+			$("#section1 .polaroid p").delay(500).animate({"bottom":"20px"},1000);
+		}
 	}
 
 // #section2

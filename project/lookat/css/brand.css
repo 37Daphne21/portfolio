@@ -1,7 +1,5 @@
 @charset "utf8";
-#sc { font-size:100px; color:blue; position: fixed; left: 0; top: 0; z-index: 999999999; }
 
-/* :after {content:''; display:block; clear:both;} */
 /* reset */
 header {background-color:rgba(185,185,185,0.1);}
 header .menu_wrap {background-color:rgba(185,185,185,0.1);}

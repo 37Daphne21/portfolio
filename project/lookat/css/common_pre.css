@@ -1,0 +1,108 @@
+@charset "utf8";
+/* #sc { font-size:100px; color:blue; position: fixed; left: 0; top: 0; z-index: 999999999; } */
+
+/*********************************** header menubar ***********************************/
+* {margin:0; padding:0; list-style-type:none; box-sizing: border-box;}
+body {font-family:'Crimson Text', serif; font-size:22px; font-weight:600;}
+a {text-decoration:none; color:#000;}
+header {position:absolute; top:0; width:100%; height:120px; opacity:0; z-index:1; transition:background 0.5s; border-bottom:1px solid rgba(0,0,0,0.5);}
+header .login_bar {float:right;}
+header .login_bar li {float:left; margin-top:25px;}
+header .login_bar li a {display:block; width:60px; text-align:center; font-weight:bold; font-size:0.75em; margin-right:30px; transition:0.3s;}
+header .login_bar li a:hover {color:#fff;}
+header .logo {clear: both; text-align:center; padding:15px 0 15px;}
+
+header .menu_wrap {width:100%; overflow:hidden; border-bottom:3px solid rgba(0,0,0,0.5); transition:background 0.5s;}
+header .menu {width:100%; margin:0 auto;}
+header .menu:after {content:''; display:block; clear:both;}
+header .menu > li {float:left; width:20%; height:50px; line-height:50px; text-align:center; transition:0.5s;}
+header .menu > li > a {font-weight:bold; color:#000; transition:0.3s; font-size: 1em;}
+header .menu > li > a:hover {color:#fff;}
+.sub_menu li a {font:600 16px 'Brygada 1918', serif; color:#000; transition:0.3s;}
+
+/* 반응형 toggle 버튼 */
+.toggle_btn {position:absolute; top:26px; right:18px; font-size:1.2em; border:none; background:transparent; display:none; cursor: pointer;}
+
+/*********************************** scrolled header menubar ***********************************/
+.header_scroll {position:fixed; top:0; left:0; width:100%; height:48px; background-color:rgba(185,173,159,0.5); opacity:0; z-index:1; transition:background 0.5s; border-bottom:1px solid rgba(0,0,0,0.5);}
+.header_scroll .login_bar {float:right;}
+.header_scroll .login_bar li {float:left; margin:15px 30px 15px 0;}
+.header_scroll .login_bar li a {display:block; width:60px; text-align:center; font-weight:bold; font-size: 0.75em; transition:0.3s;}
+.header_scroll .login_bar li a:hover {color:#fff;}
+
+.header_scroll .menu_wrap {width:100%; overflow:hidden; position:relative; clear:both; background-color:rgba(185,173,159,0.5); border-top:1px solid rgba(0,0,0,0.5); border-bottom:3px solid rgba(0,0,0,0.5); transition:background 0.5s;}
+.header_scroll .menu {width:100%; height:50px; margin:0 auto;}
+.header_scroll .logo {position:absolute; top:3px; left:30px;}
+.header_scroll .logo img {width: 70%;}
+.header_scroll .menu:after {content:''; display:block; clear:both;}
+.header_scroll .menu > li {float:left; width:20%; height:50px; line-height:50px; text-align:center; transition:0.5s;}
+.header_scroll .menu > li > a {font-weight:bold; color:#000; transition:0.3s;}
+.header_scroll .menu > li > a:hover {color:#fff;}
+.on {opacity:1; z-index:9999;}
+
+
+/*********************************** icon ***********************************/
+header .menu_icon {position:absolute; top:70px; right:30px;}
+.header_scroll .menu_icon {position:absolute; top:9px; right:30px;}
+.menu_icon li {float:left; position:relative; width:36px; height:36px; border-radius:30px; background:transparent; transition:background 1s;}
+.menu_icon li + li {margin-left:10px;}
+.menu_icon li a img {position:absolute; top:2px; left:3px;}
+.menu_icon li .white {opacity:0; transition:0.3s;}
+.menu_icon li:hover {background:#000;}
+.menu_icon li:hover .white {opacity:1;}
+.menu_icon .search img {cursor:pointer;}
+.menu_icon .search .search_bar {position:absolute; top:10px; left:20px; width:130px; background:transparent; border:none; border-bottom:1px solid #fff; display:none; color:#fff;}
+.menu_icon .icon_search_cancel {display:none; position:absolute; left:160px;}
+
+/*********************************** footer 시작 ***********************************/
+footer {width:100%; min-width:100%; height:600px; background:#b9ad9f; overflow:hidden; font:500 14px 'Bai Jamjuree', sans-serif;}
+footer h2 {font-size:1.6em; font-family: 'Brygada 1918', serif;}
+footer h3 {margin-top:30px;}
+footer p {margin-top:10px;}
+.footer_logo {width:100%; height:125px; margin-top:100px; text-align:center;}
+.footer_wrap {width:1280px; height:300px; margin:0 auto; padding:0 40px}
+.info {float:left; width:280px; margin:20px 20px 0 0;}
+.info span {color:#f00;}
+.other {float:right; margin-top:20px;}
+.other .other_links ul {margin-top:30px;}
+.other .other_links li {margin-top:5px;}
+.other .other_links li a {transition:0.5s;}
+.other .other_links li a:hover {background:#fff; padding:0 7px;}
+.other .other_button {clear:both; margin-top:30px;}
+.other .other_button li {float:left; width:70px; height:70px; border-radius:35px; border:1px solid #000; text-align:center; line-height:70px; transition:0.5s;}
+.other .other_button li:hover {background:#eee; border:1px solid #666}
+.other .other_button li a {transition:0.5s;}
+.other .other_button li:hover a {color:#333;}
+.other .other_button li + li {margin-left:10px;}
+address {width:1280px; margin:auto; font-size:0.8em; padding:0 40px;}
+
+/*********************************** top 버튼 ***********************************/
+.top_scroll {display:none; width:40px; height:40px; background:rgba(0,0,0,0.7); color:#fff; text-align:center; border-radius:40px; position:fixed; line-height:40px; bottom:50px; right:50px; font-size:0.9em; cursor:pointer; transition:0.5s;}
+.top_scroll:hover {background:rgba(255,255,255,0.7); color:#000; }
+
+
+/*********************************** 반응형 ***********************************/
+@media (max-width: 1297px) {
+    .footer_wrap {width:100%;}
+    .footer_wrap > div {width:calc((100% - (20px * 4)) / 3); margin: 0;}
+    .other {display: none;}
+}
+
+@media (max-width: 1024px) {
+    header {height: 78px; background-color :rgba(185,173,159,0.5)}
+    header img[alt=logo] {position: relative; top: 12px;}
+    .toggle_btn {display:block;}
+    .login_bar, .menu_icon {display: none;}
+    .menu_wrap {display: none;}
+    .menu_wrap a {display: block; width: 100%; height: 100%; cursor: pointer;}
+    .menu_wrap .sub_menu {display: none;}
+
+    .menu_wrap > .menu > li {width: 100%;}
+    .menu_wrap > ul > li:hover a {color: #fff; background: rgba(102,89,74,1);}
+
+    .header_scroll .toggle_btn {top: 12px;}
+    .header_scroll .menu_wrap {top: 48px;}
+
+
+}
+
