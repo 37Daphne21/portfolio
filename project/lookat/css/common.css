@@ -3,11 +3,12 @@
 * {margin:0; padding:0; list-style-type:none; box-sizing: border-box;}
 body {font-family:'Crimson Text', serif; font-size:22px; font-weight:600;}
 a {text-decoration:none; color:#000;}
+input {border:none;}
 .clear:after {content:''; display:block; clear:both;}
 
 /* header */
-header {position: fixed; top: 0; width: 100%; z-index:9999; transition: background 0.5s; opacity: 0.7; background: transparent; border-bottom: 3px solid rgba(0,0,0,1);}
-header:hover {background: rgba(185,173,159,0.7); opacity: 1;}
+header {position: fixed; top: 0; width: 100%; z-index:9999; transition: background 0.5s; background: transparent; border-bottom: 3px solid rgba(0,0,0,0.7);}
+header:hover {background: rgba(185,173,159,0.7);}
 
 .login_bar {width: 100%;}
 .login_bar .menu_icon {float: left; margin-left: 20px;}
@@ -20,8 +21,8 @@ header:hover {background: rgba(185,173,159,0.7); opacity: 1;}
 .menu_icon > li:hover > a img.white {opacity:1;}
 .menu_icon .search {position: relative;}
 .menu_icon .search img {cursor:pointer;}
-.menu_icon .search .icon_search_cancel {display:none; position:absolute; left:155px;}
-.menu_icon .search .search_bar {position:absolute; top:15px; left:20px; width:130px; height: 20px; background:transparent; border:none; border-bottom:1px solid #fff; display:none; color:#fff;}
+.menu_icon .search .icon_search_cancel {display:none; position:absolute; left:160px;}
+.menu_icon .search .search_bar {position:absolute; top:14px; left:20px; width:130px; height: 20px; background:transparent; border-bottom:1px solid #fff; display:none; color:#fff;}
 
 .login_bar .login_menu {float: right; margin-right: 20px;}
 .login_menu > li {float: left;}
@@ -30,7 +31,7 @@ header:hover {background: rgba(185,173,159,0.7); opacity: 1;}
 
 .logo {text-align:center; padding: 10px;}
 
-.menu_wrap {width: 100%; /*overflow:hidden;*/ text-align:center; border-top: 3px solid rgba(0,0,0,1);}
+.menu_wrap {width: 100%; /*overflow:hidden;*/ text-align:center; border-top: 3px solid rgba(0,0,0,0.7);}
 .menu > li {float: left; width: 20%;}
 .menu > li > a {display: block; width: 100%; height: 100%; padding: 15px; transition: 0.3s;}
 .menu > li > a {font-weight:bold; color:#000; font-size: 1em;}

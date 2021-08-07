@@ -37,7 +37,6 @@ $(document).ready(function(){
 	if( browserWidth > 1024 ) {
 		$(".menu_wrap").on("mouseenter",function(){
 			$(".sub_menu").stop().slideDown();
-
 		});
 		$(".menu_wrap").on("mouseleave",function(){
 			$(".sub_menu").stop().slideUp();
@@ -51,53 +50,17 @@ $(document).ready(function(){
 });
 
 
-// Resize Reaction
-$(window).resize(function (){
-	var browserWidth = $(window).outerWidth(); // 브라우저의 width값을 가져오기
-	console.log(browserWidth)
-
-	if( browserWidth > 1024 ) {
-		$("header").css({"background":"transparent","opacity":"0.7"});
-		$(".login_bar, .sub_menu, .menu_wrap").css({"display":"block"})
-		$(".logo").css({"text-align":"center","padding-bottom":"10px","text-indent":"0"});
-		$(".menu_wrap").on("mouseenter",function(){
-			$(".sub_menu").stop().slideDown();
-			$("header").css({"background":"rgba(185,173,159,1)","opacity":"1"});
-		});
-		$(".menu_wrap").on("mouseleave",function(){
-			$(".sub_menu").stop().slideUp();
-			$("header").css({"background":"transparent","opacity":"0.7"});
-		});
-	}
-
-	if( browserWidth <= 1024 ) {
-		$("header").css({"background":"rgba(185,173,159,1)","opacity":"1"});
-		$(".login_bar, .sub_menu, .menu_wrap").css({"display":"none"})
-		$(".logo").css({"text-align":"left","padding-bottom":"0","text-indent":"10px"});
-		$(".menu_wrap").on("mouseenter",function(){
-			$(".sub_menu").css({"display":"none"})
-			$("header").css({"background":"rgba(185,173,159,1)","opacity":"1"});
-		});
-		$(".menu_wrap").on("mouseleave",function(){
-			$(".sub_menu").css({"display":"none"})
-			$("header").css({"background":"rgba(185,173,159,1)","opacity":"1"});
-		});
-	}
-});
-
-
 // Scroll Reaction
 $(window).scroll(function(){
 	var sc = $(this).scrollTop()
-	/* console.log(sc); */
 	// 스크롤 시 header 변화(browserWidth 1024 이상)
 	var browserWidth = $(window).outerWidth(); // 브라우저의 width값을 가져오기
 	console.log(browserWidth);
-		if( browserWidth > 1024 ) {
+	if( browserWidth > 1024 ) {
 		if( sc >= 200 ) {
-			$(".login_bar").slideUp();
+			$(".login_bar").stop().slideUp();
 			$(".logo").stop().animate({"padding-bottom":"0"});
-			$("header").css({"background-color":"rgba(185,173,159,0.9)"});
+			$("header").css({"background-color":"rgba(185,173,159,0.7)"});
 			$(".menu_wrap").on("mouseenter",function(){
 				$("header").css({"background-color":"rgba(185,173,159,1)"});
 			});
@@ -105,7 +68,7 @@ $(window).scroll(function(){
 				$("header").css({"background-color":"rgba(185,173,159,0.7)"});
 			});
 		} else if( sc < 200 ) {
-			$(".login_bar").slideDown();
+			$(".login_bar").stop().slideDown();
 			$(".logo").stop().animate({"padding-bottom":"10px"});
 			$("header").css({"background-color":"transparent"});
 			$(".menu_wrap").on("mouseenter",function(){
@@ -122,5 +85,38 @@ $(window).scroll(function(){
 		$(".top_scroll").show();
 	} else if( sc < 300 ) {
 		$(".top_scroll").hide();
+	}
+});
+
+
+// Resize Reaction
+$(window).resize(function (){
+	var browserWidth = $(window).outerWidth(); // 브라우저의 width값을 가져오기
+	console.log(browserWidth)
+
+	if( browserWidth > 1024 ) {
+		$("header").css({"background":"transparent"});
+		$(".login_bar, .menu_wrap").css({"display":"block"})
+		$(".logo").css({"text-align":"center","padding-bottom":"10px","text-indent":"0"});
+		$(".menu_wrap").on("mouseenter",function(){
+			$(".sub_menu").stop().slideDown();
+			$("header").css({"background":"rgba(185,173,159,1)","opacity":"1"});
+		});
+		$(".menu_wrap").on("mouseleave",function(){
+			$(".sub_menu").stop().slideUp();
+			$("header").css({"background":"transparent"});
+		});
+	} else if( browserWidth <= 1024 ) {
+		$("header").css({"background":"rgba(185,173,159,1)"});
+		$(".login_bar, .menu_wrap").css({"display":"none"})
+		$(".logo").css({"text-align":"left","padding-bottom":"0","text-indent":"10px"});
+		$(".menu_wrap").on("mouseenter",function(){
+			$(".sub_menu").css({"display":"none"})
+			$("header").css({"background":"rgba(185,173,159,1)","opacity":"1"});
+		});
+		$(".menu_wrap").on("mouseleave",function(){
+			$(".sub_menu").css({"display":"none"})
+			$("header").css({"background":"rgba(185,173,159,1)","opacity":"1"});
+		});
 	}
 });

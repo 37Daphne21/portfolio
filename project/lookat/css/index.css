@@ -44,15 +44,14 @@ section {margin-top: 200px;}
 #section2 p {position:absolute; top:180px; left:-175px; font-size:2.4em; color:#fff;}
 #section2 img {position:absolute;}
 #section2 .drag {top:280px; left:225px; opacity:0;}
-#section2 .lady {left:300px; bottom:0;}
-#section2 .glasses img {z-index:1; opacity:0;}
-#section2 .glasses01 {left:40px; top:400px; cursor:pointer;}
-#section2 .glasses02 {left:40px; top:620px; cursor:pointer;}
-#section2 .glasses03 {left:910px; top:150px; cursor:pointer;}
-#section2 .glasses04 {left:920px; top:390px; cursor:pointer;}
-#section2 .glasses05 {left:930px; top:630px; cursor:pointer;}
+#section2 .lady {left:23%; bottom:0;}
+#section2 .glasses img {z-index:1; opacity:0; cursor:pointer;}
+#section2 .glasses01 {left:2%; top:50%;}
+#section2 .glasses02 {left:2%; top:70%;}
+#section2 .glasses03 {right:2%; top:20%;}
+#section2 .glasses04 {right:2%; top:45%;}
+#section2 .glasses05 {right:2%; top:70%;}
 #section2 .glasses_on img {display:none;}
-
 
 
 /*********************************** section3 시작 ***********************************/
@@ -89,7 +88,7 @@ section {margin-top: 200px;}
 #section4 .more_box img {position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; opacity:0; transition:0.7s;}
 #section4 .more_box:hover img {opacity:0.7;}
 
-#section4 .detail_box_wrap {background:red; position:absolute; top:90px; left:270px; width:60%; height:60%; overflow:hidden; display:none;}
+#section4 .detail_box_wrap {position:absolute; top:90px; left:270px; width:60%; height:60%; overflow:hidden; display:none;}
 #section4 .detail_box {width:100%; height:100%; position:relative;}
 #section4 .exit_btn {position:absolute; width:35px; height:35px; top:12px; right:12px; cursor:pointer; z-index:1;}
 #section4 .exit {position:absolute; display:block;}
@@ -162,40 +161,77 @@ section {margin-top: 200px;}
     .left_section .img_box img {top:0;}
     .left_section .img_box h2 {opacity: 0;}
 
-    /* section2 */
-    #section2 {display:none;}
-
     /* seccion3 */
     #section3 .img_wrap {width:100%}
-    #section3 .img_wrap {width:100%;}
 
     /* section4 */
-    #section4 {display:none;}
+    #section4 .inner {height:800px; padding: 0 5%;}
+    #section4 h2 {position:static; text-align:left; padding: 3% 0;}
+    #section4 .img_box {position: static; display:block; width: 30%; height: auto; float: left; cursor: pointer;}
+    #section4 .img_box + .img_box {margin-left: 5%;}
+    #section4 .img_box.box3 {display: none !important;}
+    #section4 .img_box > img {position: relative; width: 100%;}
+
+    #section4 .more_box {display: none;}
+    #section4 .more_box img {position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; opacity:0; transition:0.7s;}
+    #section4 .more_box:hover img {opacity:0.7;}
+
+    #section4 .detail_box_wrap {position:absolute; top:90px; left:270px; width:60%; height:60%; overflow:hidden; display:none;}
+    #section4 .detail_box {width:100%; height:100%; position:relative;}
+    #section4 .exit_btn {position:absolute; width:35px; height:35px; top:12px; right:12px; cursor:pointer; z-index:1;}
+    #section4 .exit {position:absolute; display:block;}
+    #section4 .exit_h {position:absolute; display:none;}
+    #section4 .detail_img img {width:100%; position:absolute; top:0; left:0; display:none;}
+    #section4 .detail_text {width:100%; height:50px; position:relative; top:430px; background:rgba(255,255,255,0.6);}
+    #section4 .detail_text p {position:absolute; font-size:1.1em; font-weight:bold; line-height:55px; text-indent:20px; color:#000; display:none;}
+    #section4 .detail_text button {width:20%; position:absolute; bottom:0; right:0; font:bold 1em 'Brygada 1918', serif; background:#918675; color:#000; transition:0.5s;}
+    #section4 .detail_text button:hover {background:#66594a; color:#fff;}
+
+    #section4 .detail_box .active {display:block;}
 
     /* section5 */
+    #section5 {display:none;}
 }
 
 @media (max-width:1024px) {
+    section {margin-top: 0;}
     /* section1 */
     .left_section {width:100%;}
     .left_section .polaroid {width:50%;}
     .right_section {width:100%; margin:auto; height:auto;}
-    .right_section .imgbox_move {width: 80%;}
+    .right_section {padding:10%;}
     .right_section .imgbox_move .txt1 {font-size: 2.6em;}
     .right_section .img_move_inner > .right {right: 0;}
     .right_section:hover .imgbox_move {transform:translateY(0);}
 
+    /* section2 */
+    #section2 .inner {background:#bdae9c;}
+    #section2 h2 {text-align:left;}
+    #section2 p, #section2 .drag {display: none;}
+    #section2 .lady {left:45%; transform: translateX(-50%); height: 95%;}
+    #section2 .glasses img {width: 30%;}
+
+    /* section3 */
+    #section3 {height:700px; background-attachment: fixed; background-position: 40% ;}
+    #section3 .inner {height: 100%; padding: 10%;}
+    #section3 .img_wrap {height: 100%; margin: 0;}
+    #section3 .img_wrap img {display: none;}
+    #section3 .img_wrap .play_btn, .revert_btn {display: none;}
+    #section3 .img_wrap h2 {display:none;}
 }
+
 
 @media (max-width:768px) {
     /* section1 */
     .left_section .polaroid {width:70%;}
-    .right_section .imgbox_move {width: 90%;}
 
+    /* section2 */
+    #section2 .inner {height: 600px;}
+    #section2 h2 {font-size: 1.2em;}
+    #section2 .lady {height: 95%;}
 }
 
 @media (max-width:575px) {
-    section {margin-top: 0vh;}
     /* section1 */
     .left_section {width: 100%; height: 600px; padding: 10%;}
     .left_section .polaroid {width:100%; height:100%; margin: 0 auto;}
@@ -206,6 +242,16 @@ section {margin-top: 200px;}
     .right_section .imgbox_move .txt3 {font-size: 1.4em;}
     .right_section .imgbox_move .txt4 {font-size: 0.8em;}
     .right_section .img_move_inner > p.right {right: 5%;}
+
+    /* section2 */
+    #section2 h2 {padding: 5% 10%; text-align: right; background: #e2d8cb; font-size: 1em;}
+    #section2 .lady {left: 42%;}
+    #section2 .glasses img {width: 35%;}
+    #section2 .glasses01 {left:5%; top:60%;}
+    #section2 .glasses02 {left:5%; top:80%;}
+    #section2 .glasses03 {right:5%; top:50%;}
+    #section2 .glasses04 {right:5%; top:65%;}
+    #section2 .glasses05 {right:5%; top:80%;}
 }
 
 @media (max-width:428px) {
