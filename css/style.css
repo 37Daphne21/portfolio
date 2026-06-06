@@ -68,22 +68,22 @@ button {
 }
 
 /* Typography */
-h1 {
+.title {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
   margin: 22px 0px;
 }
 
-h2 {
-  font-size: var(--font-medium);
+.subtitle {
+  font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 10px 0;
 }
 
-h3 {
-  font-size: var(--font-regular);
+.description {
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 10px 0;
