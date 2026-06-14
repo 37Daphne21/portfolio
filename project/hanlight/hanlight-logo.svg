@@ -1,0 +1,10 @@
+<svg class="hanlight-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="한빛전기 로고" role="img">
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M35 50c0-15 11-27 25-27s25 12 25 27c0 10.5-5.5 17.5-10.8 24.5H45.8C40.5 67.5 35 60.5 35 50z" stroke-width="6"/>
+    <path d="M47 84h26" stroke-width="6"/>
+    <path d="M52 95h16" stroke-width="6"/>
+    <path d="M47 46v26" stroke-width="9"/>
+    <path d="M73 46v26" stroke-width="9"/>
+    <path d="M47 59h26" stroke-width="9"/>
+  </g>
+</svg>

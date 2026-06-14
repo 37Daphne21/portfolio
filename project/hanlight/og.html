@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한빛전기 OG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Pretendard", "Noto Sans KR", sans-serif;
+        background: #ddd;
+      }
+
+      .og {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1200px;
+        height: 630px;
+        background: #9fb4c7;
+      }
+
+      .og__card {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 64px 72px;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+      }
+
+      .og__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 34px;
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+        background: #111;
+        color: #fff;
+        font-size: 42px;
+      }
+
+      .og__box {
+        display: flex;
+      }
+
+      .og__title {
+        margin: 0 0 24px;
+        color: #111;
+        font-size: 86px;
+        font-weight: 800;
+        letter-spacing: -0.06em;
+      }
+
+      .og__desc {
+        margin: 0 0 36px;
+        color: #333;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.35;
+        letter-spacing: -0.04em;
+      }
+
+      .og__area {
+        margin: 0;
+        color: #667789;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .og__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 630px;
+        height: 630px;
+      }
+
+      .og__img img {
+        width: auto;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="og">
+      <div class="og__card">
+        <div class="og__icon">
+          <svg class="hanlight-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="한빛전기 로고" role="img">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M35 50c0-15 11-27 25-27s25 12 25 27c0 10.5-5.5 17.5-10.8 24.5H45.8C40.5 67.5 35 60.5 35 50z" stroke-width="6"/>
+              <path d="M47 84h26" stroke-width="6"/>
+              <path d="M52 95h16" stroke-width="6"/>
+              <path d="M47 46v26" stroke-width="9"/>
+              <path d="M73 46v26" stroke-width="9"/>
+              <path d="M47 59h26" stroke-width="9"/>
+            </g>
+          </svg>
+        </div>
+        <div class="og__box">
+          <div class="og__text">
+            <h1 class="og__title">한빛전기</h1>
+            <p class="og__desc">전기설비 유지보수<br>누전 점검 · 자동제어 설비</p>
+            <p class="og__area">양주 · 의정부 · 포천 출장 가능</p>
+          </div>
+          <div class="og__img">
+            <img src="./images/projects/factory008.jpg" alt="카카오톡 링크 미리보기 이미지">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
